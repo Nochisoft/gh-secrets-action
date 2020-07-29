@@ -36,5 +36,7 @@ ENV PYTHONOPTIMIZE=2
 COPY ./entrypoint.sh .
 COPY --from=build /app/ghsa ./ghsa
 
+RUN chmod 777 ./entrypoint.sh
+RUN ls -la
 ENTRYPOINT ["/sbin/tini", "--"]
 CMD ["./entrypoint.sh"]
