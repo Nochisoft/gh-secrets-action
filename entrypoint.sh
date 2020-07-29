@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 python -m ghsa \
   "${INPUT_SECRETS}" \
